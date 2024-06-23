@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Teams by Decade</title>
+<style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FF1E00;
+        }
+        header {
+            background-color: #15151E;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .team {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team h3 a {
+            color: #333;
+            text-decoration: none;
+        }
+        .team h3 a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .team img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .team-content {
+            display: flex;
+            align-items: center;
+        }
+        .decade-selector {
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        function filterTeamsByDecade() {
+            const selectedDecade = document.getElementById('decade-select').value;
+            const teams = document.querySelectorAll('.team');
+            
+            teams.forEach(team => {
+                const decades = team.dataset.decades.split(',');
+                if (decades.includes(selectedDecade) || selectedDecade === 'all') {
+                    team.style.display = 'block';
+                } else {
+                    team.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Select Teams by Decade</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="select_by_decade.html">Select Teams by Decade</a>
+    <a href="selectbycountry.html">Select Teams by Country</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Select Decade</h2>
+
+    <div class="decade-selector">
+        <label for="decade-select">Select Decade:</label>
+        <select id="decade-select" onchange="filterTeamsByDecade()">
+            <option value="all">All</option>
+            <option value="2010s">2010s</option>
+            <option value="2000s">2000s</option>
+            <option value="1990s">1990s</option>
+            <option value="1980s">1980s</option>
+            <option value="1970s">1970s</option>
+            <option value="1960s">1960s</option>
+            <option value="1950s">1950s</option>
+        </select>
+    </div>
+    
+    <div class="team" data-decades="2010s">
+        <div class="team-content">
+            <img src="Logos/forceindia.png" alt="forceindia">
+            <div>
+                <h3><a href="forceindia.html">Force India Formula One Team</a></h3>
+                <p>1991 - 2018.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2010s">
+        <div class="team-content">
+            <img src="Logos/Manor.jpg" alt="forceindia">
+            <div>
+                <h3><a href="manor.html">Manor Grand Prix</a></h3>
+                <p>2010 - 2016.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2010s">
+        <div class="team-content">
+            <img src="Logos/CAterham.jpg" alt="forceindia">
+            <div>
+                <h3><a href="caterham.html">Caterham F1 Team</a></h3>
+                <p>2010 - 2014.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2010s">
+        <div class="team-content">
+            <img src="Logos/HRT.png" alt="forceindia">
+            <div>
+                <h3><a href="hrt.html">Hispania Racing Team</a></h3>
+                <p>2010 - 2012.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="team" data-decades="2000s">
+        <div class="team-content">
+            <img src="images/superaguri.jpg" alt="Super Aguri">
+            <div>
+                <h3><a href="superaguri.html">Super Aguri F1 Team</a></h3>
+                <p>2006 - 2008.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2000s">
+        <div class="team-content">
+            <img src="images/toyota.jpg" alt="Toyota">
+            <div>
+                <h3><a href="toyota.html">Toyota Racing</a></h3>
+                <p>2002 - 2009.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2000s">
+        <div class="team-content">
+            <img src="images/minardi.jpg" alt="Minardi">
+            <div>
+                <h3><a href="minardi.html">Minardi F1 Team</a></h3>
+                <p>1985 - 2005.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2000s">
+        <div class="team-content">
+            <img src="images/arrows.jpg" alt="Arrows">
+            <div>
+                <h3><a href="arrows.html">Arrows Grand Prix International</a></h3>
+                <p>1978 - 2002.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="2000s">
+        <div class="team-content">
+            <img src="images/ligier.jpg" alt="Ligier">
+            <div>
+                <h3><a href="ligier.html">Équipe Ligier/ Prost Grand Prix</a></h3>
+                <p>1976 - 2001.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="forti.html">Forti Grand Prix</a></h3>
+                <p>1995 - 1996.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/simtek.jpg" alt="Simtek">
+            <div>
+                <h3><a href="simtek.html">Simtek Grand Prix</a></h3>
+                <p>1994 - 1995.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/pacific.jpg" alt="Pacific">
+            <div>
+                <h3><a href="pacific.html">Pacific Grand Prix</a></h3>
+                <p>1994 - 1995.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="lotus.html">Team Lotus</a></h3>
+                <p>1958 - 1994.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/larrousse.jpg" alt="Lotus">
+            <div>
+                <h3><a href="larrousse.html">Larrousse Formula One</a></h3>
+                <p>1987 - 1994.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/italia.jpg" alt="Lotus">
+            <div>
+                <h3><a href="italia.html">Scuderia Italia</a></h3>
+                <p>1988 - 1993.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/brabham.jpg" alt="Lotus">
+            <div>
+                <h3><a href="brabham.html">Motor Racing Developments (Brabham)</a></h3>
+                <p>1962 - 1992.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/march.jpg" alt="Lotus">
+            <div>
+                <h3><a href="MArch.html">March Engineering</a></h3>
+                <p>1970 - 1992.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/osella.jpg" alt="Lotus">
+            <div>
+                <h3><a href="osella.html">Osella Squadra Corse/Fondmetal</a></h3>
+                <p>1980 - 1992.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/amoda.jpg" alt="Lotus">
+            <div>
+                <h3><a href="lotus.html">Andrea Moda Formula</a></h3>
+                <p>1992 - 1992.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="lotus.html">Modena Team</a></h3>
+                <p>1991 - 1991.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/ags.jpg" alt="Lotus">
+            <div>
+                <h3><a href="ags.html">AGS</a></h3>
+                <p>1986 - 1991.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/coloni.jpg" alt="Lotus">
+            <div>
+                <h3><a href="coloni.html">Scuderia Coloni</a></h3>
+                <p>1987 - 1991.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/life.jpg" alt="Lotus">
+            <div>
+                <h3><a href="life.html">Life Racing Engines</a></h3>
+                <p>1990 - 1990.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/onyx.jpg" alt="Lotus">
+            <div>
+                <h3><a href="onyx.html">Onyx Grand Prix</a></h3>
+                <p>1989 - 1990.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/eurobrun.jpg" alt="Lotus">
+            <div>
+                <h3><a href="eurobrun.html">EuroBrun Racing</a></h3>
+                <p>1988 - 1990.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/rial.jpg" alt="Lotus">
+            <div>
+                <h3><a href="rial.html">Rial Racing</a></h3>
+                <p>1980 - 1989.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="zakspeed.html">Zakspeed</a></h3>
+                <p>1985 - 1989.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/haas.jpg" alt="Lotus">
+            <div>
+                <h3><a href="haas.html">Team Haas (USA)</a></h3>
+                <p>1985 - 1986.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/alfaromeo.png" alt="Lotus">
+            <div>
+                <h3><a href="alfaromeo.html">Alfa Romeo</a></h3>
+                <p>1950 - 1951 & 1979 - 1985.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/spirit.png" alt="Lotus">
+            <div>
+                <h3><a href="spirit.html">Spirit Racing</a></h3>
+                <p>1982 - 1985.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/ram.png" alt="Lotus">
+            <div>
+                <h3><a href="ram.html">RAM Racing Team</a></h3>
+                <p>1976 - 1985.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/ats.png" alt="Lotus">
+            <div>
+                <h3><a href="ats.html">Team ATS</a></h3>
+                <p>1980 - 1989.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/theodore.png" alt="Lotus">
+            <div>
+                <h3><a href="theodore.html">Theodore Racing</a></h3>
+                <p>1977 - 1978 & 1981 - 1983.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/fittipaldi.png" alt="Lotus">
+            <div>
+                <h3><a href="fittipaldi.html">Fittipaldi Automotive</a></h3>
+                <p>1975 - 1982.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/ensign.png" alt="Lotus">
+            <div>
+                <h3><a href="ensign.html">Ensign Racing Team</a></h3>
+                <p>1973 - 1982.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/shadow.png" alt="Lotus">
+            <div>
+                <h3><a href="shadow.html">Shadow Racing Cars</a></h3>
+                <p>1973 - 1980.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/wolf.jpg" alt="Lotus">
+            <div>
+                <h3><a href="wolf.html">Frank Williams Racing Cars/ Walter Wolf Racing</a></h3>
+                <p>1969 - 1979.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/merzario.jpg" alt="Lotus">
+            <div>
+                <h3><a href="merzario.html">Team Merzario</a></h3>
+                <p>1977 - 1979.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/rebaque.jpg" alt="Lotus">
+            <div>
+                <h3><a href="rebaque.html">Team Rebaque</a></h3>
+                <p>1978 - 1979.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/kauhsen.jpg" alt="Lotus">
+            <div>
+                <h3><a href="kauhsen.html">Willi Kauhsen Racing Team</a></h3>
+                <p>1979 - 1979.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/interscope.png" alt="Lotus">
+            <div>
+                <h3><a href="interscope.html">Interscope Racing</a></h3>
+                <p>1977 - 1978.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/surtees.png" alt="Lotus">
+            <div>
+                <h3><a href="rial.html">Surtees Racing Organisation</a></h3>
+                <p>1970 - 1978.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/hesketh.png" alt="Lotus">
+            <div>
+                <h3><a href="hesketh.html">Hesketh Racing</a></h3>
+                <p>1974 - 1978.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="bsfab.html">BS Fabrications</a></h3>
+                <p>1976 - 1978.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/matrini.jpg" alt="Lotus">
+            <div>
+                <h3><a href="martini.html">Automobiles Martini</a></h3>
+                <p>1978 - 1978.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/kojima.jpg" alt="Lotus">
+            <div>
+                <h3><a href="kojima.html">Kojima Engineering</a></h3>
+                <p>1976 - 1977.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.png" alt="Lotus">
+            <div>
+                <h3><a href="boro.html">HB Bewaking Alarm Systems</a></h3>
+                <p>1976 - 1977.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1980s">
+        <div class="team-content">
+            <img src="images/brm.png" alt="Lotus">
+            <div>
+                <h3><a href="brm.html">British Racing Motors</a></h3>
+                <p>1951 - 1977.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/penske.png" alt="Lotus">
+            <div>
+                <h3><a href="penske.html">Team Penske</a></h3>
+                <p>1974 - 1976.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/maki.png" alt="Lotus">
+            <div>
+                <h3><a href="maki.html">Maki Engineering</a></h3>
+                <p>1974 - 1976.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/parnelli.png" alt="Lotus">
+            <div>
+                <h3><a href="parnelli.html">Vel's Parnelli Jones Racing</a></h3>
+                <p>1974 - 1976.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/rondini.png" alt="Lotus">
+            <div>
+                <h3><a href="rondini.html">Scuderia Rondini</a></h3>
+                <p>1976 - 1976.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="hill.html">Embassy Racing with Graham Hill</a></h3>
+                <p>1973 - 1975.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="token.html">Token Racing</a></h3>
+                <p>1974 - 1974.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/amon.png" alt="Lotus">
+            <div>
+                <h3><a href="amon.html">Chris Amon Racing</a></h3>
+                <p>1966 & 1974.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/goldie.png"alt="Lotus">
+            <div>
+                <h3><a href="goldie.html">Goldie Hexagon Racing</a></h3>
+                <p>1974 - 1974.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="finotto.html">Scuderia Finotto</a></h3>
+                <p>1974 - 1974.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/trojan.jpg" alt="Lotus">
+            <div>
+                <h3><a href="trojan.html">Trojan Racing</a></h3>
+                <p>1974 - 1974.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/tecno.jpg" alt="Lotus">
+            <div>
+                <h3><a href="tecno.html">Tecno Racing Team</a></h3>
+                <p>1972 - 1973.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/eifelland.jpg" alt="Lotus">
+            <div>
+                <h3><a href="eifelland.html">Team Eifelland</a></h3>
+                <p>1972 - 1972.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="connew.html">Connew Racing Team</a></h3>
+                <p>1972 - 1972.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="matra.html">Equipe Matra Sports</a></h3>
+                <p>1966 - 1972.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/suisse.jpg" alt="Lotus">
+            <div>
+                <h3><a href="suisse.html">Ecurie Bonnier/ Anglo-Suisse Racing Team</a></h3>
+                <p>1957 - 1971.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/stp.jpg" alt="Lotus">
+            <div>
+                <h3><a href="stp.html">STP Corporation</a></h3>
+                <p>1970 - 1970.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="robwalker.html">Rob Walker Racing Team</a></h3>
+                <p>1953 - 1970.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1970s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="crabbe.html">Colin Crabbe Racing</a></h3>
+                <p>1969 - 1970.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="cooper.html">Cooper Car Company</a></h3>
+                <p>1950 - 1969.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="regparnell.html">Reg Parnell Racing</a></h3>
+                <p>1959 - 1969.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="aar.html">Anglo American Racers</a></h3>
+                <p>1966 - 1968.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="bernardwhite.html">Bernard White Racing</a></h3>
+                <p>1966 - 1968.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="honda.html">Honda Racing</a></h3>
+                <p>1964 - 1968.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="rial.html">Charles Vogele Racing</a></h3>
+                <p>1967 - 1968.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="dwracing.html">DW Racing Enterprises</a></h3>
+                <p>1963 - 1967.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="johnwilment.html">John Wilment Automobiles</a></h3>
+                <p>1964 - 1965.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="rial.html">Scuderia Centro Sud</a></h3>
+                <p>1956 - 1965.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="scirocco.html">Scirocco Racing Cars</a></h3>
+                <p>1963 - 1964.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="brp.html">British Racing Partnership</a></h3>
+                <p>1958 - 1964.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="maarsbergen.html">Ecurie Maarsbergen</a></h3>
+                <p>1957 - 1964.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="automobiliturismosport.html">Automobili Turismo e Sport</a></h3>
+                <p>1963 - 1963.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="filipinetti.html">Scuderia Filipinetti</a></h3>
+                <p>1962 - 1963.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="excelsior.html">Ecurie Excelsior</a></h3>
+                <p>1962 - 1962.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="detomaso.html">Scuderia de Tomaso</a></h3>
+                <p>1961 - 1962.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/lotus.jpg" alt="Lotus">
+            <div>
+                <h3><a href="sss.html">Scuderia Serenissima</a></h3>
+                <p>1961 - 1962.</p>
+            </div>
+        </div>
+   </div>
+    <div class="team" data-decades="1990s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="porsche.html">Porsche</a></h3>
+                <p>1957 - 1962.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="natbelge.html">Ecurie National Belge</a></h3>
+                <p>1955 - 1962.</p>
+            </div>
+        </div>
+    </div>    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="gilby.html">Gilby Engineering</a></h3>
+                <p>1954 - 1962.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="colonia.html">Scuderia Colonia</a></h3>
+                <p>1960 - 1961.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="fredtuck.html">Fred Tuck Cars</a></h3>
+                <p>1960 - 1961.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="camoradi.html">Camoradi International</a></h3>
+                <p>1959 - 1961.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="scarab.html">Scarab</a></h3>
+                <p>1960 - 1960.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="casteli.html">Scudria Castellotti</a></h3>
+                <p>1960 - 1960.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="astonmartin.html">Aston Martin</a></h3>
+                <p>1959 - 1960.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="hem.html">High Efficiency Motors</a></h3>
+                <p>1958 - 1960.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1960s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="vanwall.html">Vanwall</a></h3>
+                <p>1954 - 1960.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="alanbrown.html">Alan Brown Equipe</a></h3>
+                <p>1959 - 1959.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="ugolini.html">Scuderia Ugolini</a></h3>
+                <p>1959 - 1959.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="connaught.html">Connaught Engineering</a></h3>
+                <p>1952 - 1959.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="maserati.html">Officine Alfieri Maserati</a></h3>
+                <p>1950 & 1952 - 1957.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="osca.html">Officine Specializzate Costruzione Automobili (O.S.C.A)</a></h3>
+                <p>1951 - 1953 & 1958.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="guast.html">Scuderia Gustalla</a></h3>
+                <p>1959 - 1959.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="bugatti.html">Automobiles Bugatti</a></h3>
+                <p>1956 - 1956.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="gordini.html">Equipe Gordini</a></h3>
+                <p>1950 - 1956.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="rosier.html">Ecurie Rosier</a></h3>
+                <p>1950 - 1956.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="lancia.html">Scuderia Lancia</a></h3>
+                <p>1954 - 1955.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="mercedes.html">Daimler-Benz (Mercedes)</a></h3>
+                <p>1954 - 1955.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="ecosse.html">Ecurie Ecosse</a></h3>
+                <p>1953 - 1954.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="francorchamps.html">Ecurie Francorchamps</a></h3>
+                <p>1952 - 1954.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="hwm.html">Hersham and Walton Motors</a></h3>
+                <p>1951 - 1954.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="ambrosiana.html">Scuderi Ambrosiana</a></h3>
+                <p>1950 - 1954.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="richmond.html">Ecurie Richmond</a></h3>
+                <p>1952 & 1954.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="emw.html">Eisenacher Motorenwerk</a></h3>
+                <p>1953 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="angla.html">Ecurie Anglaise</a></h3>
+                <p>1953 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="afm.html">Alex von Falkenhausen Motorenbau</a></h3>
+                <p>1952 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="bandeirantes.html">Escuderia Bandeirantes</a></h3>
+                <p>1951 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="belge.html">Ecurie Belge</a></h3>
+                <p>1950 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="enricoplate.html">Scuderia Enciro Plate</a></h3>
+                <p>1950 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="espadon.html">Ecurie Espadon</a></h3>
+                <p>1950 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="milano.html">Scuderia Milano</a></h3>
+                <p>1950 - 1953.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="franera.html">Scuderia Franera</a></h3>
+                <p>1952 - 1952.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="alta.html">Alta Car and Engineering Company</a></h3>
+                <p>1950 - 1952.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="era.html">English Racing Automobiles</a></h3>
+                <p>1950 - 1952.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="talbot.html">Talbot-Lago</a></h3>
+                <p>1950 - 1951.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="aca.html">Scuderia Achille Varzi</a></h3>
+                <p>1950 - 1950.</p>
+            </div>
+        </div>
+    </div>
+    <div class="team" data-decades="1950s">
+        <div class="team-content">
+            <img src="images/forti.jpg" alt="Forti">
+            <div>
+                <h3><a href="lutetia.html">Ecurie Lutetia</a></h3>
+                <p>1950 - 1950.</p>
+            </div>
+        </div>
+    </div>
+<footer>
+    <p>&copy; 2024 Defunct F1 Teams. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
